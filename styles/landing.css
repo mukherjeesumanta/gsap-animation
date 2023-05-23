@@ -1,0 +1,64 @@
+img {
+    max-width: 100%;
+}
+
+.container {
+    overflow: hidden;
+}
+
+.text-wrapper {
+    text-align: center;
+    position: relative;
+}
+
+.hero .img-section img {
+    transform: scale(0.25);
+    margin-top: 60%;
+}
+
+.plane-in-sky {
+    padding-top: 5rem;
+}
+
+.plane-in-sky .airplane {
+    margin-top: 150%;
+}
+
+.airplane img {
+    transform: scale(3);
+}
+
+.imagine {
+    padding: 1.5rem;
+    background-color: #000;
+    color: #fff;
+}
+
+.imagine .top {
+    text-align: left;
+    font-size: 1.5rem;
+}
+
+.imagine .middle {
+    text-align: center;
+    font-size: 3rem;
+    font-weight: 700;
+    padding: 1rem 0;
+}
+
+.imagine .bottom {
+    text-align: right;
+    font-size: 1.5rem;
+}
+.cards {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+  }
+.crad {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    background-color: #fff;
+}
