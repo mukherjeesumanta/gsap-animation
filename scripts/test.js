@@ -52,36 +52,57 @@ tl.to(".desc", {
     ".image img",
     {
         scale: 1,
-        top: '15vh',
-        duration: 3
-    },
-    "<"
-);
-
-/* 
-
-const tl = gsap.timeline();
-tl.to(
-    //.add("start")
-    ".hero .img-section img",
-    {
-        scale: 1,
-        marginTop: "-5%",
+        top: "13vh",
         duration: 3,
-    }
-    //"start"
-).to(
-    ".hero .text-wrapper",
-    {
-        scale: 2,
-        top: "5rem",
-        opacity: 0.2,
-        duration: 2,
     },
     "<"
 );
 
-*/
+const tl2 = gsap.timeline({
+    scrollTrigger: {
+        trigger: ".plane-in-sky",
+        start: "top top",
+        end: "bottom top",
+        scrub: true,
+        pin: true,
+        pinSpacing: false,
+        invalidateOnRefresh: true,
+    },
+});
+
+const scrollHeightPlane = document.querySelector(".plane-in-sky").scrollHeight;
+
+const planeTop = () => window.pageYOffset - scrollHeight;
+
+tl2.to(".airplane", {
+    y: -500, //document.documentElement.scrollTop does NOT work with Safari nor Apple Products.
+    duration: 3,
+})
+    .to(
+        ".couple .img-div",
+        {
+            bottom: "0%",
+            scale: 1,
+            duration: 2,
+        },
+        "<"
+    )
+    .to(
+        ".cloud-left",
+        {
+            y: 400,
+            duration: 2,
+        },
+        "<"
+    )
+    .to(
+        ".cloud-right",
+        {
+            y: 150,
+            duration: 2,
+        },
+        "<"
+    );
 
 const cards = gsap.utils.toArray(".card");
 cards.forEach((card, index) => {
@@ -110,8 +131,43 @@ cards.forEach((card, index) => {
     });
 });
 
-let sections = gsap.utils.toArray(".panel");
+const tl3 = gsap.timeline({
+    scrollTrigger: {
+        trigger: ".thumbnails",
+        start: "top top",
+        end: "bottom top",
+        scrub: true,
+        pin: true,
+        pinSpacing: false,
+        invalidateOnRefresh: true,
+    },
+});
+tl3.to(
+    ".first-col",
+    {
+        y: -200,
+        duration: 2,
+    },
+    "<"
+)
+    .to(
+        ".second-col",
+        {
+            y: -400,
+            duration: 2,
+        },
+        "<"
+    )
+    .to(
+        ".third-col",
+        {
+            y: -100,
+            duration: 2,
+        },
+        "<"
+    );
 
+const sections = gsap.utils.toArray(".panel");
 gsap.to(sections, {
     xPercent: -100 * (sections.length - 1),
     ease: "none",

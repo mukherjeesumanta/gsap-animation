@@ -40,9 +40,13 @@ body {
 img {
   max-width: 100%;
 }
+h1 {
+  font-size: 4rem;
+  color: #fff;
+  text-transform: uppercase;
+}
 
 .hero {
-  margin-bottom: 100px;
   height: 100vh;
   width: 100%;
   position: relative;
@@ -149,8 +153,41 @@ img {
   padding: 10px;
 }
 
-h1 {
-  font-size: 4rem;
-  color: #fff;
-  text-transform: uppercase;
+.plane-in-sky{
+  padding-top: 10px;
+  height: 100vh;
+  position: relative;
+}
+.col-4 {
+  display: inline-block;
+  width: 32.6%;
+}
+.plane-in-sky .airplane {
+  top: 70vh;
+  position: relative;
+  text-align: center;
+}
+.airplane img {
+  width: 50%;
+}
+.couple .img-div{
+  bottom: -20%;
+  position: absolute;
+  transform: scale(0.5);
+  /* left: 50%;
+  transform: translateX(-50%); */
+}
+.spacer {
+  height: 100vh;
+  width: 100%;
+}
+.thumbnails {
+  height:  100vh;
+  background-color: #fff;
+  position: relative;
+}
+.thumbnails .thumb-cols {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
 }
