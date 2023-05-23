@@ -1,9 +1,9 @@
 import Lenis from "@studio-freight/lenis";
 import { gsap } from "gsap";
-import { Flip } from "gsap/Flip";
+//import { Flip } from "gsap/Flip";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { EaselPlugin } from "gsap/EaselPlugin";
-import { TextPlugin } from "gsap/TextPlugin";
+/* import { EaselPlugin } from "gsap/EaselPlugin";
+import { TextPlugin } from "gsap/TextPlugin"; */
 
 /*
 SplitText.min.js is a Club GreenSock perk
@@ -70,9 +70,6 @@ const tl2 = gsap.timeline({
     },
 });
 
-const scrollHeightPlane = document.querySelector(".plane-in-sky").scrollHeight;
-
-const planeTop = () => window.pageYOffset - scrollHeight;
 
 tl2.to(".airplane", {
     y: -500, //document.documentElement.scrollTop does NOT work with Safari nor Apple Products.
